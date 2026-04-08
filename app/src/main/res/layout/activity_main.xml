@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/main_background"
+    tools:context=".MainActivity">
+
+<!--    FAZER ARQUIVO COM OS STYLES-->
+<!--    FAZER OS DRAWABLES-->
+<!--    ṔESQUISAR ICONS-->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@color/header">
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/greetings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Olá, João"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:textColor="@color/main_background"
+            android:textSize="17sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/header_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Diário de Treinos"
+            android:layout_below="@+id/greetings"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:textStyle="bold"
+            android:textColor="@color/main_background"
+            android:textSize="25sp">
+        </TextView>
+
+        <TextView
+            android:id="@+id/date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Segunda, 07 de Abril"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:layout_below="@+id/header_title"
+            android:textColor="@color/main_background"
+            android:textSize="17sp">
+        </TextView>
+
+        <Button
+            android:id="@+id/button_dom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/date"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="10dp"
+            android:text="Dom"
+            >
+        </Button>
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
