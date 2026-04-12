@@ -47,6 +47,11 @@
 <!--    CARD DE PROGRESSO-->
     <style name="progress_card">
         <item name="android:background">@color/bg_card</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:padding">15dp</item>
+        <item name="android:orientation">vertical</item>
     </style>
 
 <!--    TEXTO DO CARD DE PROGRESSO-->
@@ -69,6 +74,7 @@
 <!--    CARDS DE TREINOS DO DIA-->
     <style name="cards_workouts">
         <item name="android:background">@color/bg_card</item>
+        <item name="android:layout_marginTop">16dp</item>
         <item name="android:layout_marginStart">16dp</item>
         <item name="android:layout_marginEnd">16dp</item>
         <item name="android:layout_marginBottom">8dp</item>

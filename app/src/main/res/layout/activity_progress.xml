@@ -420,7 +420,7 @@
                         android:layout_height="wrap_content"
                         android:text="Grupos musculares trabalhados"/>
 
-                    <!--    PEITO 80%-->
+                    <!--    PEITO (AMO VEI) -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -454,7 +454,7 @@
 
                     </LinearLayout>
 
-                    <!--    PERNAS 65%-->
+                    <!--    PERNAS -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -488,7 +488,7 @@
 
                     </LinearLayout>
 
-                    <!--    BICEPS 50%-->
+                    <!--    BICEPS -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -522,7 +522,7 @@
 
                     </LinearLayout>
 
-                    <!--    COSTAS 40%-->
+                    <!--    COSTAS -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -556,7 +556,7 @@
 
                     </LinearLayout>
 
-                    <!--    OMBROS 25%-->
+                    <!--    OMBROS -->
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
