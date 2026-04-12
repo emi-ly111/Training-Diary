@@ -43,7 +43,7 @@
             style="@style/progress_header_subtitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Acompanhe sua evolucao"/>
+            android:text="Acompanhe sua evolução"/>
 
         <!--    TOGGLE DE PERIODO-->
         <LinearLayout
@@ -161,7 +161,7 @@
                         <LinearLayout
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:orientation="horizontal"
+                            android:orientation="vertical"
                             android:gravity="center_vertical">
 
                             <TextView
@@ -232,7 +232,7 @@
                             style="@style/stat_unit"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="h"/>
+                            android:text="horas"/>
 
                         <TextView
                             style="@style/stat_label"

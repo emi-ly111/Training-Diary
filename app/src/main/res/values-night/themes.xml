@@ -3,5 +3,7 @@
     <style name="Base.Theme.Training_diary" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+            <item name="colorSecondaryContainer">@color/orange_light</item>
+            <item name="colorOnSecondaryContainer">@color/orange_primary</item>
     </style>
 </resources>
