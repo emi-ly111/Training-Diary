@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+<!--    PRIMEIRA TELA-->
+    
+<!--    BACKGROUND HEADER-->
+    <style name="header">
+        <item name="android:background">@color/header</item>
+    </style>
+
+<!--    TEXTVIEW SAUDACOES-->
+    <style name="greetings">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:textColor">@color/main_background</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+<!--    TITULO HEADER-->
+    <style name="header_title">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">5dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/main_background</item>
+        <item name="android:textSize">25sp</item>
+    </style>
+
+<!--    DATA-->
+    <style name="date">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:textColor">@color/main_background</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+
+<!--    PILLS DE FILTROS DE DIAS DA SEMANA-->
+    <style name="button">
+        <item name="android:layout_marginStart">20dp</item>
+        <item name="android:layout_marginTop">14dp</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:paddingStart">14dp</item>
+        <item name="android:paddingEnd">14dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+<!--    CARD DE PROGRESSO-->
+    <style name="progress_card">
+        <item name="android:background">@color/bg_card</item>
+    </style>
+
+<!--    TEXTO DO CARD DE PROGRESSO-->
+    <style name="progress_text">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/text_main</item>
+    </style>
+
+<!--    LABEL DE TREINOS DO DIA-->
+    <style name="todays_workouts">
+        <item name="android:textSize">17sp</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginTop">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">"@color/text_secondary"</item>
+    </style>
+
+<!--    CARDS DE TREINOS DO DIA-->
+    <style name="cards_workouts">
+        <item name="android:background">@color/bg_card</item>
+        <item name="android:layout_marginStart">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+        <item name="android:layout_marginBottom">8dp</item>
+    </style>
+
+    <!--    CHIP DO CARD DE TREINO (SE FEITO)-->
+    <style name="main_card_done_status">
+        <item name="android:text">Feito</item>
+        <item name="android:background">@color/teal_light</item>
+        <item name="android:textColor">@color/teal_primary</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+    <!--    CHIP DO CARD DE TREINO (SE PENDENTE)-->
+    <style name="main_card_pendent_status">
+        <item name="android:text">Pendente</item>
+        <item name="android:background">@color/orange_pale</item>
+        <item name="android:textColor">@color/coral_dark</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingStart">8dp</item>
+        <item name="android:paddingEnd">8dp</item>
+        <item name="android:paddingTop">3dp</item>
+        <item name="android:paddingBottom">3dp</item>
+        <item name="android:textSize">10dp</item>
+    </style>
+
+
+
+</resources>

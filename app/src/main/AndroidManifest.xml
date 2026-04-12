@@ -12,6 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Training_diary">
         <activity
+            android:name=".ProgressActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WorkoutActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

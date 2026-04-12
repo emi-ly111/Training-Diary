@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--    TITULO DO HEADER-->
+    <style name="progress_header_title">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">22sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--    SUBTITULO DO HEADER-->
+    <style name="progress_header_subtitle">
+        <item name="android:textColor">#B3FFFFFF</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:layout_marginTop">2dp</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <!--    BOTAO DE PERIODO DO TOGGLE (INATIVO)-->
+    <style name="period_btn">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#99FFFFFF</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:paddingBottom">5dp</item>
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <!--    BOTAO DE PERIODO DO TOGGLE (ATIVO)-->
+    <style name="period_btn_active" parent="period_btn">
+        <item name="android:textColor">@color/orange_primary</item>
+        <item name="android:background">@drawable/bg_period_btn_active</item>
+    </style>
+
+    <!--    VALOR PRINCIPAL DOS CARDS DE STAT-->
+    <style name="stat_value">
+        <item name="android:textColor">@color/text_main</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--    UNIDADE DOS CARDS DE STAT-->
+    <style name="stat_unit">
+        <item name="android:textColor">@color/orange_primary</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!--    LABEL DOS CARDS DE STAT-->
+    <style name="stat_label">
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:layout_marginTop">2dp</item>
+    </style>
+
+    <!--    TITULO DOS CARDS DE CONTEUDO-->
+    <style name="card_section_title">
+        <item name="android:textColor">@color/text_main</item>
+        <item name="android:textSize">13sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginBottom">12dp</item>
+    </style>
+
+    <!--    LABEL DO GRUPO MUSCULAR-->
+    <style name="muscle_label">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <!--    PERCENTUAL DO GRUPO MUSCULAR-->
+    <style name="muscle_pct">
+        <item name="android:layout_width">32dp</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/orange_primary</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:gravity">end</item>
+    </style>
+
+    <!--    LABEL DAS BARRAS DO GRAFICO-->
+    <style name="bar_label">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:textSize">10sp</item>
+    </style>
+
+</resources>

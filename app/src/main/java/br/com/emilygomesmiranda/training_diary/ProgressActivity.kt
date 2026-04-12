@@ -1,48 +1,45 @@
 package br.com.emilygomesmiranda.training_diary
 
-import android.os.Bundle
 import android.content.Intent
-import androidx.activity.enableEdgeToEdge
+import android.os.Bundle
+import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import com.google.android.material.card.MaterialCardView
+import androidx.activity.enableEdgeToEdge
 
-class MainActivity : AppCompatActivity() {
+class ProgressActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_progress)
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main)) { v, insets ->
             val systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
 
-        // NAVEGACAO PARA A TELA DE ROSCA DIRETA (APENAS TESTE PARA VER COMO ESTA)
-        findViewById<MaterialCardView>(R.id.workout_rosca_direta).setOnClickListener {
-            startActivity(Intent(this, WorkoutActivity::class.java))
+        // BOTAO VOLTAR
+        findViewById<ImageView>(R.id.button_back).setOnClickListener {
+            finish()
         }
 
         // BOTTOM NAV
         val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-        bottomNav.selectedItemId = R.id.nav_inicio
+        bottomNav.selectedItemId = R.id.nav_progresso
 
         bottomNav.setOnItemSelectedListener { item ->
             when (item.itemId) {
-                R.id.nav_inicio -> true
-                R.id.nav_progresso -> {
-                    startActivity(Intent(this, ProgressActivity::class.java))
+                R.id.nav_inicio -> {
+                    startActivity(Intent(this, MainActivity::class.java))
+                    finish()
                     true
                 }
+                R.id.nav_progresso -> true
                 else -> false
             }
         }
-    }
-    override fun onResume() {
-        super.onResume()
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNav)
-        bottomNav.selectedItemId = R.id.nav_inicio
+
     }
 }

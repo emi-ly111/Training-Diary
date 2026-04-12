@@ -1,74 +1,434 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:id="@+id/main"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/main_background"
     tools:context=".MainActivity">
 
-<!--    FAZER ARQUIVO COM OS STYLES-->
-<!--    FAZER OS DRAWABLES-->
-<!--    ṔESQUISAR ICONS-->
 
+    <!--  HEADER  -->
     <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:id="@+id/header"
+        style="@style/header"
+        android:layout_width="0dp"
+        android:layout_height="170dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!--  SAUDACAO  -->
+    <TextView
+        android:id="@+id/greetings"
+        style="@style/greetings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Olá, João"
+        app:layout_constraintTop_toTopOf="@+id/header"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--  TITULO  -->
+    <TextView
+        android:id="@+id/header_title"
+        style="@style/header_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Diário de Treinos"
+        app:layout_constraintTop_toBottomOf="@+id/greetings"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--  DATA  -->
+    <TextView
+        android:id="@+id/date"
+        style="@style/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Segunda, 13 de Abril"
+        app:layout_constraintTop_toBottomOf="@+id/header_title"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <!--  PILLS DOS DIAS DA SEMANA  -->
+    <HorizontalScrollView
+        android:id="@+id/days_scroll"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:clipToPadding="false"
+        app:layout_constraintTop_toBottomOf="@+id/date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginEnd="8dp">
+
+            <TextView
+                android:id="@+id/button_dom"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_day_pill"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Dom"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/button_seg"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_day_pill_active"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Seg"
+                android:textColor="@color/orange_primary"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/button_ter"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_day_pill"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Ter"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/button_qua"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_day_pill"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Qua"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/button_quin"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_day_pill"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Quin"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/button_sex"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_day_pill"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Sex"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:id="@+id/button_sab"
+                style="@style/button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_day_pill"
+                android:clickable="true"
+                android:focusable="true"
+                android:text="Sáb"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+    <!--  CONTEUDO SCROLLAVEL VERTICALMENTE (ABAIXO DO HEADER)  -->
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:layout_constraintBottom_toTopOf="@+id/bottomNav"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="180dp"
-            android:background="@color/header">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="24dp">
+
+            <!--  CARD PROGRESSO  -->
+            <LinearLayout
+                android:id="@+id/progress_bar"
+                style="@style/progress_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="15dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginTop="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginBottom="6dp">
+
+                    <TextView
+                        style="@style/progress_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Progresso do dia"/>
+
+                    <TextView
+                        android:id="@+id/progress_text"
+                        style="@style/progress_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/orange_primary"
+                        android:text="2/3 concluídos"/>
+
+                </LinearLayout>
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="6dp"
+                    android:background="@color/orange_primary"
+                    android:clipChildren="true"
+                    android:clipToPadding="true">
+
+<!--                    NOTA: TENTEI USAR UM COMṔONENTE DE PROGRESSO, MAS ELE NAO PERMITE -->
+<!--                    CUSTOMIZAÇOES FACEIS DE COR E ARREDONDAMENTO, -->
+<!--                    ENTAO OPTEI POR UM FRAME LAYOUT COM UMA VIEW DENTRO DELE -->
+<!--                    PARA SIMULAR O PROGRESSO
+                        FOI MAL AI MAS VC VAI TER QUE ATUALIZAR ELE NA PROGRAMACAO:/ -->
+                    <View
+                        android:id="@+id/progressFill"
+                        android:layout_width="0dp"
+                        android:layout_height="6dp"
+                        android:background="@color/orange_primary"/>
+
+                </FrameLayout>
+
+            </LinearLayout>
+
+            <!--  LABEL TREINOS DE HOJE  -->
+            <TextView
+                android:id="@+id/todays_workouts"
+                style="@style/todays_workouts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Treinos de hoje"/>
+
+            <!--  CARD TREINO 1  -->
+            <com.google.android.material.card.MaterialCardView
+                style="@style/cards_workouts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/border_default">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_dumbbell"
+                        android:layout_marginEnd="10dp">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Supino Reto"
+                            android:textColor="@color/text_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="4 séries · 12 reps · Peito"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp"
+                            android:layout_marginTop="2dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/main_card_done_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--  CARD TREINO 2  -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/border_default">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_dumbbell"
+                        android:layout_marginEnd="10dp">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Agachamento"
+                            android:textColor="@color/text_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 séries · 15 reps · Pernas"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp"
+                            android:layout_marginTop="2dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/main_card_done_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!--  CARD TREINO 3  -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/workout_rosca_direta"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="8dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="0dp"
+                app:cardBackgroundColor="@color/white"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/border_default">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="12dp"
+                    android:gravity="center_vertical"
+                    android:layout_marginEnd="8dp">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:background="@drawable/ic_dumbbell"
+                        android:layout_marginEnd="10dp">
+                    </ImageView>
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rosca Direta"
+                            android:textColor="@color/text_main"
+                            android:textSize="14sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="3 séries · 10 reps · Bíceps"
+                            android:textColor="@color/text_secondary"
+                            android:textSize="11sp"
+                            android:layout_marginTop="2dp"/>
+
+                    </LinearLayout>
+
+                    <TextView
+                        style="@style/main_card_pendent_status"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
         </LinearLayout>
 
-        <TextView
-            android:id="@+id/greetings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Olá, João"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="20dp"
-            android:textColor="@color/main_background"
-            android:textSize="17sp">
-        </TextView>
+    </ScrollView>
 
-        <TextView
-            android:id="@+id/header_title"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Diário de Treinos"
-            android:layout_below="@+id/greetings"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="5dp"
-            android:textStyle="bold"
-            android:textColor="@color/main_background"
-            android:textSize="25sp">
-        </TextView>
-
-        <TextView
-            android:id="@+id/date"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Segunda, 07 de Abril"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:layout_below="@+id/header_title"
-            android:textColor="@color/main_background"
-            android:textSize="17sp">
-        </TextView>
-
-        <Button
-            android:id="@+id/button_dom"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/date"
-            android:layout_marginStart="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Dom"
-            >
-        </Button>
-    </RelativeLayout>
-
+<!--    MENU DE NAVEGACAO-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNav"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        app:menu="@menu/bottom_nav_menu"
+        app:labelVisibilityMode="labeled"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
