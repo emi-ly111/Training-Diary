@@ -2,13 +2,15 @@
 <resources>
     <!--    BOTAO DE VOLTAR-->
     <style name="button_back">
-        <item name="android:layout_marginStart">20dp</item>
-        <item name="android:layout_marginTop">20dp</item>
+        <item name="android:layout_width">24dp</item>
+        <item name="android:layout_height">24dp</item>
+        <item name="android:layout_marginEnd">0dp</item>
+        <item name="android:layout_marginTop">0dp</item>
+        <item name="android:layout_marginStart">0dp</item>
     </style>
 
 <!--    SUBTITULO DO HEADER-->
     <style name="workout_header_subtitle">
-        <item name="android:layout_marginStart">20dp</item>
         <item name="android:layout_marginTop">10dp</item>
         <item name="android:textColor">@color/main_background</item>
         <item name="android:textSize">17sp</item>
