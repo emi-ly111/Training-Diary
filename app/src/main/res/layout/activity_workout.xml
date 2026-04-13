@@ -95,10 +95,10 @@
                 android:layout_below="@+id/ic_rosca_direta">
             </TextView>
 
-            <!-- SERIE 1 - FEITA-->
+            <!-- SERIE 1 -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/serie_1"
                 style="@style/checkbox_completed_series"
-                android:id="@+id/checkbox_completed_series"
                 android:layout_below="@+id/label_completed_series"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -117,6 +117,7 @@
                     android:layout_marginEnd="8dp">
 
                 <androidx.appcompat.widget.AppCompatCheckBox
+                    android:id="@+id/checkbox_1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:checked="true"
@@ -153,7 +154,7 @@
 
                         <TextView
                             style="@style/workout_card_done_status"
-                            android:id="@+id/card_status"
+                            android:id="@+id/card_status_1"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                         </TextView>
@@ -161,11 +162,11 @@
             </LinearLayout>
         </com.google.android.material.card.MaterialCardView>
 
-<!--            SERIE 2 - FEITA-->
+<!--            SERIE 2 -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/serie_2"
                 style="@style/checkbox_completed_series"
-                android:id="@+id/checkbox_completed_series_2"
-                android:layout_below="@+id/checkbox_completed_series"
+                android:layout_below="@+id/serie_1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
@@ -183,6 +184,7 @@
                     android:layout_marginEnd="8dp">
 
                     <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/checkbox_2"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:checked="true"
@@ -219,7 +221,7 @@
 
                         <TextView
                             style="@style/workout_card_done_status"
-                            android:id="@+id/card_pendent_status"
+                            android:id="@+id/card_status_2"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content">
                         </TextView>
@@ -227,11 +229,11 @@
                 </LinearLayout>
             </com.google.android.material.card.MaterialCardView>
 
-<!--            SERIE 3 - PENDENTE-->
+<!--            SERIE 3 -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/serie_3"
                 style="@style/checkbox_completed_series"
-                android:id="@+id/checkbox_completed_series_3"
-                android:layout_below="@+id/checkbox_completed_series_2"
+                android:layout_below="@+id/serie_2"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:cardCornerRadius="16dp"
@@ -249,6 +251,7 @@
                     android:layout_marginEnd="8dp">
 
                     <androidx.appcompat.widget.AppCompatCheckBox
+                        android:id="@+id/checkbox_3"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         app:buttonTint="@color/teal_primary">
@@ -283,6 +286,7 @@
                         android:layout_height="wrap_content">
 
                         <TextView
+                            android:id="@+id/card_status_3"
                             style="@style/workout_card_pending_status"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
@@ -298,7 +302,7 @@
                 android:id="@+id/label_observations"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/checkbox_completed_series_3"
+                android:layout_below="@+id/serie_3"
                 android:text="Observações">
             </TextView>
 

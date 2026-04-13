@@ -1,5 +1,6 @@
 package br.com.emilygomesmiranda.training_diary
 
+import android.annotation.SuppressLint
 import android.os.Bundle
 import android.content.Intent
 import androidx.activity.enableEdgeToEdge
@@ -10,6 +11,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.card.MaterialCardView
 
 class MainActivity : AppCompatActivity() {
+    @SuppressLint("MissingInflatedId")
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -20,9 +22,25 @@ class MainActivity : AppCompatActivity() {
             insets
         }
 
-        // NAVEGACAO PARA A TELA DE ROSCA DIRETA (APENAS TESTE PARA VER COMO ESTA)
+        fun abrirExercicio(nome: String, series: Int, reps: String, grupo: String) {
+            val intent = Intent(this, WorkoutActivity::class.java)
+            intent.putExtra("nome", nome)
+            intent.putExtra("series", series)
+            intent.putExtra("reps", reps)
+            intent.putExtra("grupo", grupo)
+            startActivity(intent)
+        }
+
+        findViewById<MaterialCardView>(R.id.workout_supino).setOnClickListener {
+            abrirExercicio("Supino Reto", 4, "12", "Peito")
+        }
+
+        findViewById<MaterialCardView>(R.id.workout_agachamento).setOnClickListener {
+            abrirExercicio("Agachamento", 3, "15", "Pernas")
+        }
+
         findViewById<MaterialCardView>(R.id.workout_rosca_direta).setOnClickListener {
-            startActivity(Intent(this, WorkoutActivity::class.java))
+            abrirExercicio("Rosca Direta", 3, "10", "Bíceps")
         }
 
         // BOTTOM NAV

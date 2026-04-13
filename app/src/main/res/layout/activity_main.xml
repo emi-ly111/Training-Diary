@@ -230,6 +230,7 @@
 
             <!--  CARD TREINO 1  -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/workout_supino"
                 style="@style/cards_workouts"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -296,6 +297,7 @@
 
             <!--  CARD TREINO 2  -->
             <com.google.android.material.card.MaterialCardView
+                android:id="@+id/workout_agachamento"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="16dp"
