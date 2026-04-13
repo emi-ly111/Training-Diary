@@ -14,6 +14,8 @@ import androidx.appcompat.widget.AppCompatCheckBox
 class WorkoutActivity : AppCompatActivity() {
     @SuppressLint("MissingInflatedId")
 
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -41,20 +43,33 @@ class WorkoutActivity : AppCompatActivity() {
         fun configurarSerie(checkId: Int, statusId: Int) {
             val check = findViewById<AppCompatCheckBox>(checkId)
             val status = findViewById<TextView>(statusId)
+            val dia = intent.getStringExtra("dia") ?: "Seg"
+
+            val prefs = getSharedPreferences("treinos", MODE_PRIVATE)
+
+            val nomeExercicio = intent.getStringExtra("nome") ?: ""
+            val key = "${dia}_${nomeExercicio}_$checkId"
 
             fun atualizarUI(isChecked: Boolean) {
                 if (isChecked) {
-                    status.text = "Concluído"
-                    status.setTextAppearance(R.style.workout_card_done_status)
+                    status.text = "Feito"
+                    status.setBackgroundResource(R.color.teal_light)
+                    status.setTextColor(getColor(R.color.teal_primary))
                 } else {
                     status.text = "Pendente"
-                    status.setTextAppearance(R.style.workout_card_pending_status)
+                    status.setBackgroundResource(R.color.orange_pale)
+                    status.setTextColor(getColor(R.color.coral_dark))
                 }
             }
 
-            atualizarUI(check.isChecked)
+            // RECUPERA estado salvo
+            val salvo = prefs.getBoolean(key, false)
+            check.isChecked = salvo
+            atualizarUI(salvo)
 
+            // SALVA quando muda
             check.setOnCheckedChangeListener { _, isChecked ->
+                prefs.edit().putBoolean(key, isChecked).apply()
                 atualizarUI(isChecked)
             }
         }

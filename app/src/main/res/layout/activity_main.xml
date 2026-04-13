@@ -194,22 +194,16 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:textColor="@color/orange_primary"
-                        android:text="2/3 concluídos"/>
+                        android:text="0/3 concluídos"/>
 
                 </LinearLayout>
 
                 <FrameLayout
                     android:layout_width="match_parent"
                     android:layout_height="6dp"
-                    android:background="@color/orange_primary"
+                    android:background="@color/orange_pale"
                     android:clipChildren="true"
                     android:clipToPadding="true">
-
-<!--                    NOTA: TENTEI USAR UM COMṔONENTE DE PROGRESSO, MAS ELE NAO PERMITE -->
-<!--                    CUSTOMIZAÇOES FACEIS DE COR E ARREDONDAMENTO, -->
-<!--                    ENTAO OPTEI POR UM FRAME LAYOUT COM UMA VIEW DENTRO DELE -->
-<!--                    PARA SIMULAR O PROGRESSO
-                        FOI MAL AI MAS VC VAI TER QUE ATUALIZAR ELE NA PROGRAMACAO:/ -->
                     <View
                         android:id="@+id/progressFill"
                         android:layout_width="0dp"
@@ -222,7 +216,7 @@
 
             <!--  LABEL TREINOS DE HOJE  -->
             <TextView
-                android:id="@+id/todays_workouts"
+                android:id="@+id/todays_workout"
                 style="@style/todays_workouts"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -287,7 +281,8 @@
                     </LinearLayout>
 
                     <TextView
-                        style="@style/main_card_done_status"
+                        android:id="@+id/status_supino"
+                        style="@style/main_card_pendent_status"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -356,7 +351,8 @@
                     </LinearLayout>
 
                     <TextView
-                        style="@style/main_card_done_status"
+                        android:id="@+id/status_agachamento"
+                        style="@style/main_card_pendent_status"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>
 
@@ -425,6 +421,7 @@
                     </LinearLayout>
 
                     <TextView
+                        android:id="@+id/status_rosca_direta"
                         style="@style/main_card_pendent_status"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"/>

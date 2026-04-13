@@ -48,7 +48,7 @@
 
 <!--    CHIP DO CHECKBOX DE SERIE (SE PENDENTE)-->
     <style name="workout_card_pending_status">
-        <item name="android:text">Pendent</item>
+        <item name="android:text">Pendente</item>
         <item name="android:background">@color/orange_pale</item>
         <item name="android:textColor">@color/coral_dark</item>
         <item name="android:textStyle">bold</item>
